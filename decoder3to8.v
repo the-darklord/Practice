@@ -1,15 +1,18 @@
-module decoder3to8(i,En,y);
-input [2:0]i;
+module decoder3to8(in,En,y);
+input [2:0]in;
 input En;
-output [0:7]y;
-
-assign y[0] = (En&~i[2]&~i[1]&~i[0]);
-assign y[1] = (En&~i[2]&~i[1]&i[0]);
-assign y[2] = (En&~i[2]&i[1]&~i[0]);
-assign y[3] = (En&~i[2]&i[1]&i[0]);
-assign y[4] = (En&i[2]&~i[1]&~i[0]);
-assign y[5] = (En&i[2]&~i[1]&i[0]);
-assign y[6] = (En&i[2]&i[1]&~i[0]);
-assign y[7] = (En&i[2]&i[1]&i[0]);
-
+output reg [0:7]y;
+integer i;
+reg [2:0]c=0;
+always @ (in,c)
+begin
+for(i=0;i<8;i=i+1)
+begin
+if(En)
+begin
+y[i]=(in==c)?1:0;
+end
+c=c+3'b001;
+end
+end
 endmodule

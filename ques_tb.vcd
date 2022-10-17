@@ -1,5 +1,5 @@
 $date
-	Sun Oct 16 16:56:58 2022
+	Mon Oct 17 22:25:30 2022
 $end
 $version
 	Icarus Verilog
@@ -12,14 +12,16 @@ $var wire 1 ! f3 $end
 $var wire 1 " f2 $end
 $var wire 1 # f1 $end
 $var reg 1 $ En $end
-$var reg 3 % i [2:0] $end
+$var reg 3 % in [2:0] $end
 $scope module d0 $end
 $var wire 1 $ En $end
 $var wire 1 # f1 $end
 $var wire 1 " f2 $end
 $var wire 1 ! f3 $end
-$var wire 3 & i [2:0] $end
-$var wire 8 ' y [0:7] $end
+$var wire 3 & in [2:0] $end
+$var reg 3 ' c [2:0] $end
+$var reg 8 ( y [0:7] $end
+$var integer 32 ) i [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -28,7 +30,9 @@ $dumpall
 $end
 #0
 $dumpvars
-b10000 '
+b1000 )
+b10000 (
+b0 '
 b11 &
 b11 %
 1$
@@ -40,13 +44,17 @@ $end
 0"
 1#
 1!
-b1 '
+b1 (
+b0 '
+b1000 )
 b111 %
 b111 &
 #40
 0#
 0!
+b0 (
 b0 '
+b1000 )
 b11 %
 b11 &
 0$

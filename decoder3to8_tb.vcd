@@ -1,5 +1,5 @@
 $date
-	Sun Oct 16 16:49:30 2022
+	Mon Oct 17 22:15:40 2022
 $end
 $version
 	Icarus Verilog
@@ -10,11 +10,13 @@ $end
 $scope module decoder3to8_tb $end
 $var wire 8 ! y [0:7] $end
 $var reg 1 " En $end
-$var reg 3 # i [2:0] $end
+$var reg 3 # in [2:0] $end
 $scope module d0 $end
 $var wire 1 " En $end
-$var wire 3 $ i [2:0] $end
-$var wire 8 % y [0:7] $end
+$var wire 3 $ in [2:0] $end
+$var reg 3 % c [2:0] $end
+$var reg 8 & y [0:7] $end
+$var integer 32 ' i [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -23,7 +25,9 @@ $dumpall
 $end
 #0
 $dumpvars
-b10000 %
+b1000 '
+b10000 &
+b0 %
 b11 $
 b11 #
 1"
@@ -31,12 +35,14 @@ b10000 !
 $end
 #20
 b1 !
-b1 %
+b1 &
+b0 %
+b1000 '
 b111 #
 b111 $
 #40
-b0 !
 b0 %
+b1000 '
 b11 #
 b11 $
 0"
