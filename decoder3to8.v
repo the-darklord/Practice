@@ -12,6 +12,10 @@ if(En)
 begin
 y[i]=(in==c)?1:0;
 end
+else
+begin
+y[i]=0;
+end
 c=c+3'b001;
 end
 end
