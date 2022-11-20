@@ -1,0 +1,281 @@
+$date
+	Sun Nov 20 19:14:44 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module rc_tb $end
+$var wire 4 ! Q [3:0] $end
+$var reg 1 " Resetn $end
+$var reg 1 # clock $end
+$scope module f1 $end
+$var wire 1 " Resetn $end
+$var wire 1 # clock $end
+$var wire 2 $ c1 [1:0] $end
+$var wire 4 % Q [3:0] $end
+$scope module s0 $end
+$var wire 1 " Resetn $end
+$var wire 1 # clock $end
+$var wire 2 & y [1:0] $end
+$scope module s0 $end
+$var wire 1 " Resetn $end
+$var wire 1 ' T $end
+$var wire 1 # clock $end
+$var reg 1 ( Q $end
+$upscope $end
+$scope module s1 $end
+$var wire 1 " Resetn $end
+$var wire 1 ) T $end
+$var wire 1 # clock $end
+$var reg 1 * Q $end
+$upscope $end
+$upscope $end
+$scope module s1 $end
+$var wire 1 + En $end
+$var wire 2 , in [1:0] $end
+$var reg 4 - y [3:0] $end
+$var integer 32 . i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx .
+bx -
+bx ,
+1+
+x*
+x)
+x(
+1'
+bx &
+bx %
+bx $
+0#
+0"
+bx !
+$end
+#10
+0)
+b1 !
+b1 %
+b1 -
+b100 .
+0(
+b0 $
+b0 &
+b0 ,
+0*
+1#
+#20
+0#
+1"
+#30
+1)
+b10 !
+b10 %
+b10 -
+b100 .
+b1 $
+b1 &
+b1 ,
+1(
+1#
+#40
+0#
+#50
+0)
+b100 !
+b100 %
+b100 -
+b100 .
+0(
+b10 $
+b10 &
+b10 ,
+1*
+1#
+#60
+0#
+#70
+1)
+b1000 !
+b1000 %
+b1000 -
+b100 .
+b11 $
+b11 &
+b11 ,
+1(
+1#
+#80
+0#
+#90
+0)
+b1 !
+b1 %
+b1 -
+b100 .
+0(
+b0 $
+b0 &
+b0 ,
+0*
+1#
+#100
+0#
+#110
+1)
+b10 !
+b10 %
+b10 -
+b100 .
+b1 $
+b1 &
+b1 ,
+1(
+1#
+#120
+0#
+#130
+0)
+b100 !
+b100 %
+b100 -
+b100 .
+0(
+b10 $
+b10 &
+b10 ,
+1*
+1#
+#140
+0#
+#150
+1)
+b1000 !
+b1000 %
+b1000 -
+b100 .
+b11 $
+b11 &
+b11 ,
+1(
+1#
+#160
+0#
+#170
+0)
+b1 !
+b1 %
+b1 -
+b100 .
+0(
+b0 $
+b0 &
+b0 ,
+0*
+1#
+#180
+0#
+#190
+1)
+b10 !
+b10 %
+b10 -
+b100 .
+b1 $
+b1 &
+b1 ,
+1(
+1#
+#200
+0#
+#210
+0)
+b100 !
+b100 %
+b100 -
+b100 .
+0(
+b10 $
+b10 &
+b10 ,
+1*
+1#
+#220
+0#
+#230
+1)
+b1000 !
+b1000 %
+b1000 -
+b100 .
+b11 $
+b11 &
+b11 ,
+1(
+1#
+#240
+0#
+#250
+0)
+b1 !
+b1 %
+b1 -
+b100 .
+0(
+b0 $
+b0 &
+b0 ,
+0*
+1#
+#260
+0#
+#270
+1)
+b10 !
+b10 %
+b10 -
+b100 .
+b1 $
+b1 &
+b1 ,
+1(
+1#
+#280
+0#
+#290
+0)
+b100 !
+b100 %
+b100 -
+b100 .
+0(
+b10 $
+b10 &
+b10 ,
+1*
+1#
+#300
+0#
+#310
+1)
+b1000 !
+b1000 %
+b1000 -
+b100 .
+b11 $
+b11 &
+b11 ,
+1(
+1#
+#320
+0#
