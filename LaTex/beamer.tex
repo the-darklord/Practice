@@ -1,0 +1,73 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{crane}
+\title{Beamer Presentation}
+\author{NAYAKANTI SAI MIHIRNATH}
+\institute{MIT MANIPAL}
+\date{December 2022}
+
+\begin{document}
+	\frame{\titlepage}
+	\newpage
+	\begin{frame}{Table of Contents}
+		\frametitle{Table of Contents}
+		\tableofcontents
+	\end{frame}
+	\newpage
+	\section{Blocks}
+	\begin{frame}{Blocks}
+		\subsection{Block}
+		\begin{block}{Marvel}
+			Avengers
+		\end{block}
+		\subsection{Alert Block}
+		\begin{alertblock}{The Wizarding World}
+			Harry Potter\\
+			Fantastic Beasts
+		\end{alertblock}
+		\subsection{Examples}
+		\begin{examples}
+			Lucifer \\
+			The Sandman
+		\end{examples}
+	\end{frame}
+	\newpage
+	\section{Columns}
+	\begin{frame}{Columns}
+		\begin{columns}
+			\begin{column}[]{0.4\textwidth}
+				\begin{block}{Name}
+					\small{NAYAKANTI SAI MIHIRNATH}
+				\end{block}
+				\begin{block}{Age}
+					19
+				\end{block}
+			\end{column}
+			\begin{column}[]{0.4\textwidth}
+				\begin{block}{Semester}
+					Third
+				\end{block}
+				\begin{block}{Institute}
+					MIT MANIPAL
+				\end{block}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	\newpage
+	\section{Lists}
+	\begin{frame}{Lists}
+		\begin{itemize}
+			\item<1-> Slide 1
+			\item<2-> Slide 2
+			\item<3-> Slide 3
+			\item<4-> Slide 4
+		\end{itemize}
+	\end{frame}
+	\newpage
+	\section{Pause}
+	\begin{frame}{Pause}
+		Visible of Slide 1 \pause \\
+		Finally Everything will be here \\
+		\alert{Zamn}
+	\end{frame}
+\end{document}
