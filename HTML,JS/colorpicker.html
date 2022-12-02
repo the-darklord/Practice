@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="bgc">Pick a Color</label> &nbsp; &nbsp; <input type="color" id="bgc">
+        <br><br>
+        <div id="bg" style="width: 500px;height:500px;">
+
+        </div>
+        <script>
+            var col = document.getElementById("bgc");
+            col.addEventListener('input',()=>{
+                document.getElementById("bg").style.backgroundColor=col.value;
+            }
+            )
+        </script>
+    </body>
+</html>
