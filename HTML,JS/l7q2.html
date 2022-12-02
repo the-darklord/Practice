@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="clock" style="background: darkorange;text-align:center;width:500px;height:200px;font-size:100px;">
+            Real Time Clock
+        </div>
+        <script>
+            window.onload=function(){
+                Clock();
+            };
+            function Clock()
+            {
+                var time = new Date();
+                var hours = time.getHours();
+                var min = time.getMinutes();
+                var sec = time.getSeconds();
+                document.getElementById("clock").innerHTML=hours+":"+min+":"+sec;
+                console.log(hours+":"+min+":"+sec);
+            }
+            setInterval(Clock,1000);
+        </script>
+    </body>
+</html>

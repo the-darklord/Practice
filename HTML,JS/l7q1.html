@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p" onmouseover="show(this.id)">Hello</p>
+        <br>
+        <br>
+        <h1 id="h1" onmouseover="show(this.id)">MIHIR</h1>
+        <script>
+            function show(id) {
+                var c = document.getElementById(id);
+                var cc = c.getBoundingClientRect();
+
+                var show = "Coordinates of HTML Element of id : "+c.id+"\nX Position : "+cc.x+"\nY Position : "+cc.y;
+                alert(show);
+
+            }
+
+        </script>
+    </body>
+</html>

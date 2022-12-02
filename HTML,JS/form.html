@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="javascript:void(0)">
+            <label for="name">Name</label> <input type="text" id="name" placeholder="Enter Name"> <br><br>
+            <label for="password">Password</label> <input type="password" id="password" placeholder="Enter Password"> <br><br>
+            <label >Gender</label> &nbsp;
+            <input type="radio" id="r1" name="gender" onchange="change()"> <label for="r1">Male</label> &nbsp;
+            <input type="radio" id="r2" name="gender" onchange="change()"> <label for="r2">Female</label> <br><br>
+            <label >Hobbies</label> &nbsp;
+            <input type="checkbox" id="c1" name="hobbies"> <label for="c1">Sports</label> &nbsp;
+            <input type="checkbox" id="c2" name="hobbies"> <label for="c2">Movies and TV Shows</label> &nbsp;
+            <input type="checkbox" id="c3" name="hobbies"> <label for="c3">Books</label> &nbsp;
+            <br><br>
+            <button type="submit" onclick="validate(this.form)">Submit</button> &nbsp;
+            <button type="reset">Reset</button><br><br>
+            <div id="show"></div> <br><br>
+            <img id="image" src="" />
+        </form>
+        <script>
+            function validate(form)
+            {
+                var n = form.name.value;
+                var p = form.password.value;
+
+                if(n=="Mihir"&&p=="Sai@1234")
+                {
+                    document.getElementById("show").innerHTML = "Correct Password";
+                }
+                else
+                {
+                    document.getElementById("show").innerHTML = "Incorrect Password";
+                }
+            }
+
+            function change()
+            {
+                var img = document.getElementById("image");
+                if(document.getElementById('r1').checked)
+                {
+                    img.src="male.png";
+                }
+                else if(document.getElementById('r2').checked)
+                {
+                    img.src="female.png";
+                }
+            }
+        </script>
+    </body>
+</html>

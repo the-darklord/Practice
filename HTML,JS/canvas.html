@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="javascript:void(0)">
+
+        </form>
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <script lang="javascript">
+            let c=document.getElementById("canvas");
+            let ctx=c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(200,200,100, 0, Math.PI * 2, true);
+            ctx.fillStyle ="yellow";
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(250,200);
+            ctx.arc(200,200,50, 0, Math.PI, false);
+            ctx.ellipse(200,200, 50, 30, Math.PI, 0, Math.PI, true);
+            ctx.fillStyle ="white";
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(160,160);
+            ctx.arc(140,160,20, 0, Math.PI * 2, false);
+            ctx.moveTo(280,160);
+            ctx.arc(260,160,20, 0, Math.PI * 2, false);
+            ctx.fillStyle ="black";
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(150,160);
+            ctx.arc(140,160,10, 0, Math.PI * 2, false);
+            ctx.moveTo(270,160);
+            ctx.arc(260,160,10, 0, Math.PI * 2, false);
+            ctx.fillStyle ="white";
+            ctx.fill();
+            ctx.stroke();
+                
+        </script>
+    </body>
+</html>

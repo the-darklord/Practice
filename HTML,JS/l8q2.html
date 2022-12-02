@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var n = prompt("Enter Array Size");
+            var sum=0;
+            var product=1;
+            for(var i=0;i<n;i++)
+            {
+                var t = prompt("Enter Array Element"+(i+1));
+                sum+=parseInt(t);
+                product*=t;
+            }
+            alert("Sum : "+sum+"\nProduct : "+product);
+        </script>
+    </body>
+</html>
