@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: black;
+            }
+
+            .box {
+                position:absolute;
+                top:50%;
+                left:50%;
+                height:90vh;
+                width:50vw;
+                transform:translate(-50%,-50%);
+                border:2px solid white;
+            }
+
+            .ball {
+                position:absolute;
+                height:30px;
+                width:30px;
+                background:white;
+                left:50%;
+                top:50%;
+                border-radius:50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="ball">
+
+            </div>
+        </div>
+        <script>
+            const box=document.querySelector(".box")
+            const ball=document.querySelector(".ball")
+
+            let lr=Math.floor(Math.random()*2)
+            let r = lr?true:false
+            
+            let ud = Math.floor(Math.random()*2)
+            let u = ud?true:false
+
+            let speed=3
+
+            let ballmove = setInterval(()=>{
+                let ballbounds=ball.getBoundingClientRect()
+                let boxbounds=box.getBoundingClientRect()
+
+                let bbleft=parseInt(ballbounds.left)
+                let bbright=parseInt(ballbounds.right)
+                let bbtop=parseInt(ballbounds.top)
+                let bbbottom=parseInt(ballbounds.bottom)
+
+                let balltop=Math.floor(parseInt(window.getComputedStyle(ball).getPropertyValue("top")))
+                let ballleft=Math.floor(parseInt(window.getComputedStyle(ball).getPropertyValue("left")))
+
+                if(r&&u)
+                {
+                    ball.style.top=balltop-speed+"px"
+                    ball.style.left=balltop+speed+"px"
+                }
+                if(!r&&u)
+                {
+                    ball.style.top=balltop-speed+"px"
+                    ball.style.left=ballleft-speed+"px"
+                }
+                if(r&&!u)
+                {
+                    ball.style.top=balltop+speed+"px"
+                    ball.style.left=ballleft+speed+"px"
+                }
+                if(!r&&!u)
+                {
+                    ball.style.top=balltop+speed+"px"
+                    ball.style.left=ballleft-speed+"px"
+                }
+
+                if(bbtop<=boxbounds.top)
+                {
+                    lr=Math.floor(Math.random()*2)
+                    r = lr?true:false
+                    up=false
+                }
+                if(bbbottom>=boxbounds.bottom)
+                {
+                    lr=Math.floor(Math.random()*2)
+                    r = lr?true:false
+                    up=true
+                }
+                if(bbright>=boxbounds.right)
+                {
+                    r=false
+                    ud = Math.floor(Math.random()*2)
+                    u = ud?true:false
+                }
+                if(bbleft<=boxbounds.left)
+                {
+                    r=true
+                    ud = Math.floor(Math.random()*2)
+                    u = ud?true:false
+                }
+
+
+            },10)
+
+        </script>
+    </body>
+</html>
