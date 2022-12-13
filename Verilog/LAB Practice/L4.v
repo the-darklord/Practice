@@ -1,3 +1,13 @@
+module onesin6(x,f);
+input[5:0]x;
+output[2:0]f;
+wire c1,c2,s1,s2,c3;
+fadder o0(x[0],x[1],x[2],s1,c1);
+fadder o1(x[3],x[4],x[5],s2,c2);
+fadder o2(s1,s2,1'b0,f[0],c3);
+fadder o3(c1,c2,c3,f[1],f[2]);
+endmodule
+
 module bcd(x,y,s,Cout);
 input[3:0]x,y;
 output[3:0]s;

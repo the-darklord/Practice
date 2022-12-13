@@ -1,6 +1,22 @@
-module signedcomp4(a,b,aeqb,agtb,altb);
-input[3:0]a,b;
-output aeqb,agtb,altb;
+// module signedcomp4(a,b,aeqb,agtb,altb);
+// input[3:0]a,b;
+// output aeqb,agtb,altb;
+// endmodule
+
+module bintogrey(b,g);
+parameter n=4;
+input[n-1:0]b;
+output reg [n-1:0]g;
+integer i;
+
+always @ (g,b)
+begin
+    g[n-1]=b[n-1];
+    for(i=n-2;i>=0;i=i-1)
+    begin
+        g[i]=b[i]^b[i+1];
+    end
+end
 endmodule
 
 module greytobin(g,b);
