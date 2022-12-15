@@ -33,7 +33,7 @@ class NewThread extends Thread
         this.name=name;
         this.a=a;
         this.b=b;
-        new Thread(this,this.name);
+        super(this,this.name);
         System.out.println(this.name);
         start();
     }
