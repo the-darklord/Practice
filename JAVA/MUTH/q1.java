@@ -1,7 +1,30 @@
 
-// class NewThread implements Runnable
+class NewThread implements Runnable
+{
+    Thread t;
+    String name;
+    int[] a,b;
+    int sum=0;
+    NewThread(String name,int[] a,int[] b)
+    {
+        this.name=name;
+        this.a=a;
+        this.b=b;
+        t = new Thread(this,this.name);
+        t.start();
+    }
+    public void run()
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            sum=sum+a[i]*b[i];
+        }
+        System.out.print(sum+"\t");
+    }
+}
+
+// class NewThread extends Thread
 // {
-//     Thread t;
 //     String name;
 //     int[] a,b;
 //     NewThread(String name,int[] a,int[] b)
@@ -9,9 +32,9 @@
 //         this.name=name;
 //         this.a=a;
 //         this.b=b;
-//         t = new Thread(this,this.name);
+//         super(this,this.name);
 //         System.out.println(this.name);
-//         t.start();
+//         start();
 //     }
 //     public void run()
 //     {
@@ -23,30 +46,6 @@
 //         System.out.print(c+"\t");
 //     }
 // }
-
-class NewThread extends Thread
-{
-    String name;
-    int[] a,b;
-    NewThread(String name,int[] a,int[] b)
-    {
-        this.name=name;
-        this.a=a;
-        this.b=b;
-        super(this,this.name);
-        System.out.println(this.name);
-        start();
-    }
-    public void run()
-    {
-        int c = 0;
-        for(int i=0;i<a.length;i++)
-        {
-            c=c+a[i]*b[i];
-        }
-        System.out.print(c+"\t");
-    }
-}
 
 class q1
 {
@@ -62,13 +61,17 @@ class q1
                 c[i][j]=b[j][i];
             }
         }
+        int k=0;
         for(int i=0;i<a.length;i++)
         {
             for(int j=0;j<b[0].length;j++)
             {
+                k++;
                 String name = "Thread"+i+j;
                 t[i+j] = new NewThread(name,a[i],c[j]);
+                t[i+j].t.setPriority(Thread.MAX_PRIORITY-k);
             }
+            System.out.print("\n");
         }
     }
 }
