@@ -34,7 +34,7 @@ char* pop(STACKSTRING *ptr)
 
 void display(STACKSTRING *ptr)
 {
-    for(int t=ptr->top;t!=-1;t++)
+    for(int t=ptr->top;t!=-1;t--)
     {
         printf("%s \t",ptr->stack[t]);
     }

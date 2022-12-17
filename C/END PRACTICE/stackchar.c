@@ -32,7 +32,7 @@ char pop(STACKCHAR *ptr)
 
 void display(STACKCHAR *ptr)
 {
-    for(int t=ptr->top;t!=-1;t++)
+    for(int t=ptr->top;t!=-1;t--)
     {
         printf("%c \t",ptr->stack[t]);
     }

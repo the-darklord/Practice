@@ -32,7 +32,7 @@ int pop(STACKINT *ptr)
 
 void display(STACKINT *ptr)
 {
-    for(int t=ptr->top;t!=-1;t++)
+    for(int t=ptr->top;t!=-1;t--)
     {
         printf("%d \t",ptr->stack[t]);
     }
