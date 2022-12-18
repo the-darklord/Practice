@@ -103,7 +103,7 @@ void intopre(char str[])
         }
         else
         {
-            while(precedence(peek(ptr))>=precedence(str[i]))
+            while(precedence(peek(ptr))>precedence(str[i]))
             {
                 pre[j++]=pop(ptr);
             }

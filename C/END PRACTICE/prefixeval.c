@@ -93,8 +93,8 @@ void prefixeval(char str[])
         }
         else
         {
-            int op2=pop(ptr);
             int op1=pop(ptr);
+            int op2=pop(ptr);
             int val=eval(op1,op2,str[i]);
             push(ptr,val);
         }

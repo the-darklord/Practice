@@ -78,12 +78,6 @@ void postfixeval(char str[])
     ptr->size=n;
     ptr->stack=(int *)malloc(ptr->size*sizeof(int));
     char temp;
-    for(int i=0;i<n/2;i++)
-    {
-        temp=str[i];
-        str[i]=str[n-i-1];
-        str[n-i-1]=temp;
-    }
     int i=0;
     while(str[i]!='\0')
     {
