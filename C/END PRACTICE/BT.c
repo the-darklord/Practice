@@ -15,6 +15,12 @@ typedef struct
     int top;
 }STACK;
 
+typedef struct
+{
+    Nodeptr queue[100];
+    int front,rear;
+}QUEUE;
+
 void push(STACK *ptr,Nodeptr item)
 {
     ptr->stack[++ptr->top]=item;
@@ -23,6 +29,16 @@ void push(STACK *ptr,Nodeptr item)
 Nodeptr pop(STACK *ptr)
 {
     return ptr->stack[ptr->top--];
+}
+
+void enque(QUEUE *ptr,Nodeptr x)
+{
+    ptr->queue[++ptr->rear]=x;
+}
+
+Nodeptr deque(QUEUE *ptr)
+{
+    return ptr->queue[++ptr->front];
 }
 
 Nodeptr getnode()
@@ -171,6 +187,112 @@ void iterative_postorder(Nodeptr root)
     }
 }
 
+void Level_Order(Nodeptr root)
+{
+    QUEUE q1;
+    q1.front=q1.rear=-1;
+    if(!root)
+    {
+        printf("\nEmpty Tree\n");
+        return;
+    }
+    enque(&q1,root);
+    while(q1.front!=q1.rear)
+    {
+        Nodeptr temp=deque(&q1);
+        printf("%d ",temp->data);
+        if(temp->lc)
+        {
+            enque(&q1,temp->lc);
+        }
+        if(temp->rc)
+        {
+            enque(&q1,temp->rc);
+        }
+    }
+}
+
+int Search(Nodeptr root,int ele)
+{
+    static int t=0;
+    if(root)
+    {
+        if(root->data==ele)
+        {
+            t++;
+            return t;
+        }
+        if(t==0)
+        {
+            Search(root->lc,ele);
+        }
+        if(t==0)
+        {
+            Search(root->rc,ele);
+        }
+    }
+}
+
+Nodeptr Copy_Tree(Nodeptr root)
+{
+    if(!root)
+    {
+        return NULL;
+    }
+    Nodeptr temp=getnode();
+    temp->data=root->data;
+    temp->lc=Copy_Tree(root->lc);
+    temp->rc=Copy_Tree(root->rc);
+    return temp;
+}
+
+int max(int a,int b)
+{
+    return (a>b?a:b);
+}
+
+int Height(Nodeptr root)
+{
+    if(!root)
+    {
+        return 0;
+    }
+    return (1+max(Height(root->lc),Height(root->rc)));
+}
+
+int Node_Count(Nodeptr root)
+{
+    static int count=0;
+    if(root)
+    {
+        Node_Count(root->lc);
+        count++;
+        Node_Count(root->rc);
+    }
+    return count;
+}
+
+int Leaf_Node_Count(Nodeptr root)
+{
+    static int count=0;
+    if(root)
+    {
+        if(!root->lc&&!root->rc)
+        {
+            count++;
+        }
+        Leaf_Node_Count(root->lc);
+        Leaf_Node_Count(root->rc);
+    }
+    return count;
+}
+
+int Equal(Nodeptr root1,Nodeptr root2)
+{
+    return ((!root1&&!root2)||(root1&&root2&&(root1->data==root2->data)&&
+    Equal(root1->lc,root2->lc)&&Equal(root1->rc,root2->rc)));
+}
+
 void main()
 {
     Nodeptr root=NULL;
@@ -190,4 +312,15 @@ void main()
     iterative_preorder(root);
     printf("\nIterative Postorder : ");
     iterative_postorder(root);
+    printf("\nLevel Order : ");
+    Level_Order(root);
+    printf("\nSearching 2 : ");
+    if(Search(root,2))
+    {
+        printf("\nFound 2");
+    }
+    else
+    {
+        printf("\n2 isn't there");
+    }
 }
