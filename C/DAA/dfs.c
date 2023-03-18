@@ -1,49 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int n=4;
-static int count=0;
+int n;
+int *visited;
+int **adj;
 
-void dfs(int A[][10],int visited[],int v,int push[],int pop[])
+void DFS(int i)
 {
-    count++;
-    visited[v]=0;
-    for(int i=0;i<n;i++)
+    visited[i]=1;
+    for(int j=0;j<n;j++)
     {
-        if(A[v][i]&&!visited[i])
+        if(adj[i][j]&&!visited[j])
         {
-            push[v]=count;
-            dfs(A,visited,i,push,pop);
-            pop[v]=n-count;
-            printf("Push : %d\nPop : %d\n\n",push[v],pop[v]);
+            DFS(j);
         }
     }
-}
-
-void DFS(int A[][10],int visited[],int push[],int pop[])
-{
-    for(int i=0;i<n;i++)
-    {
-        if(!visited[i])
-        {
-            dfs(A,visited,i,push,pop);
-        }
-    }
+	printf("%d ",i);
 }
 
 void main()
 {
-    int adj[n][n];
-    int visited[n],push[n],pop[n];
-    printf("Enter Adjacency Matrix : \nEnter \n1 for YES\n2 for NO\n");
+    printf("Enter No. of Vertices : \t");
+    scanf("%d",&n);
+    visited=(int *)malloc(n*sizeof(int));
+    adj=(int **)calloc(n,sizeof(int *));
+    printf("Enter %d*%d Adjacency Matrix : \n",n,n);
     for(int i=0;i<n;i++)
     {
         visited[i]=0;
-        push[i]=0;
-        pop[i]=0;
+        adj[i]=(int *)malloc(n*sizeof(int));
         for(int j=0;j<n;j++)
         {
             scanf("%d",&adj[i][j]);
         }
     }
-    DFS(adj,visited,push,pop);
+    printf("\nDFS ORDER IS : \n");
+    DFS(0);
+    printf("\n\n");
 }
