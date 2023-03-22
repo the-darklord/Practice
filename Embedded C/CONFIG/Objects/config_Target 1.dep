@@ -1,0 +1,17 @@
+Dependencies for Project 'config', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\startup_LPC17xx.s)(0x559D03D2)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx--pd "__UVISION_VERSION SETA 538"--list .\listings\startup_lpc17xx.lst --xref -o .\objects\startup_lpc17xx.o --depend .\objects\startup_lpc17xx.d)
+F (.\system_LPC17xx.c)(0x641B4118)(--gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="538"-o .\objects\system_lpc17xx.o --omf_browse .\objects\system_lpc17xx.crf --depend .\objects\system_lpc17xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E5FEA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D04DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57037F3A)
+F (..\CODES\ringcounter.c)(0x641B493C)(--gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="538"-o .\objects\ringcounter.o --omf_browse .\objects\ringcounter.crf --depend .\objects\ringcounter.d)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D04DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E5FEA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D0EC2)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57037F3A)
