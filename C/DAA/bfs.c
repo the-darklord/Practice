@@ -1,3 +1,24 @@
+/*
+ALGORITHM BFS(G)
+    mark each vertex with 0
+    count ← 0
+    for each vertex v in V
+        if v is marked with 0
+            bfs(v)
+
+bfs(v)
+    count ← count + 1
+    mark v with count
+    add v to queue
+    while queue is not empty
+        for each vertex w in V adjacent to the front vertex
+            if w is marked with 0
+                count ← count + 1
+                add w to queue
+        remove front vertex from queue
+        
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

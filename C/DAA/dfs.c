@@ -1,3 +1,20 @@
+/*
+ALGORITHM DFS(G)
+    mark each vertex with 0
+    count ← 0
+    for each vertex in V
+        if v is marked with 0
+            dfs(v)
+    
+dfs(v)
+    count ← count + 1
+    mark v with count
+    for each vertex w in V adjacent to v
+        if w is marked with 0
+            dfs(w)
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
