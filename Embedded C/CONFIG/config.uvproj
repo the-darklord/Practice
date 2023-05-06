@@ -433,6 +433,11 @@
               <FileType>1</FileType>
               <FilePath>.\system_LPC17xx.c</FilePath>
             </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>D:\ES Project\Mihir's\main.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
