@@ -8,21 +8,23 @@ __Vectors
 		ENTRY
 		EXPORT Reset_Handler
 Reset_Handler
-		LDR R0,=SRC
-		LDR R2,=DST
+		LDR R0,=NUM
 		LDR R1,[R0]
-UP		CMP R1,#0
-		BEQ STOP
-		BL UNPACK
+		LDR R0,=DST
+		MOV R3,#1
+		MOV R4,#0xA
+		MOV R5,#0
+		MOV R7,#0xF
+UP		MOV R6,R1
+		AND R6,R7
+		MLA R5,R6,R3,R5
+		MUL R3,R4
 		LSR R1,#4
 		CMP R1,#0
 		BNE UP
+		STR R5,[R0]
 STOP	B STOP
-UNPACK	
-		AND R3,R1,#0xF
-		STRB R3,[R2],#1
-		BX LR
-SRC DCD 0x41
+NUM DCD 0x35
 		AREA mydata,DATA,READWRITE
 DST DCD 0
 		END

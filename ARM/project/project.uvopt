@@ -170,7 +170,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>R2-1-1-1-1-1-1-1</ItemText>
+          <ItemText>R5</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -232,8 +232,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\codes\fibonacci.s</PathWithFileName>
-      <FilenameWithoutPath>fibonacci.s</FilenameWithoutPath>
+      <PathWithFileName>..\codes\A-B_SQUARE.s</PathWithFileName>
+      <FilenameWithoutPath>A-B_SQUARE.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

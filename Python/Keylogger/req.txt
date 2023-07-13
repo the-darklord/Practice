@@ -1,0 +1,3 @@
+pyHook==1.5.1
+python-com==0.1.1
+tkinter==8.6

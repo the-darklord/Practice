@@ -424,9 +424,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>fibonacci.s</FileName>
+              <FileName>A-B_SQUARE.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\codes\fibonacci.s</FilePath>
+              <FilePath>..\codes\A-B_SQUARE.s</FilePath>
             </File>
           </Files>
         </Group>

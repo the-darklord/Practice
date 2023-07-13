@@ -1,0 +1,6 @@
+--cpu Cortex-M3 -g --apcs=interwork -masm=auto
+-IC:\Keil_v5\ARM\RV31\INC
+-IC:\Keil_v5\ARM\CMSIS\Include
+-IC:\Keil_v5\ARM\INC\NXP\LPC17xx
+--pd "__UVISION_VERSION SETA 538"
+--list .\listings\file.lst --xref -o .\objects\file.o --depend .\objects\file.d "CODES\FILE.s"
