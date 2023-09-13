@@ -1,15 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "BST.c"
 
-/*
-This is Mihir
-*/
-
+void balancefactor(Nodeptr root)
+{
+    if(root)
+    {
+        int balfac=height(root->lchild)-height(root->rchild);
+        printf("%d ---> %d\n",root->data,balfac);
+        balancefactor(root->lchild);
+        balancefactor(root->rchild);
+    }
+}
 
 void main()
 {
-	int a=1,b=2;
-	int c=a+b;
-	int d[10];
-	printf("rara pooka %d\n",c);
-	scanf("%d",&d[0]);
+    int x;
+    printf("Enter Root Data : \t");
+    scanf("%d",&x);
+    Nodeptr root=create_BST(root,x);
+    printf("\n");
+    balancefactor(root);
+    printf("\n\n");
 }

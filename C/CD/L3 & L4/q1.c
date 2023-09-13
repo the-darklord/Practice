@@ -288,8 +288,7 @@ struct token getNextToken(FILE *fin)
         }
         else if (c == '#')
         {
-            while ((c = fgetc(fin)) != EOF && c != '\n')
-                ;
+            while ((c = fgetc(fin)) != EOF && c != '\n');
             newLine();
         }
         else if (c == '\n')
