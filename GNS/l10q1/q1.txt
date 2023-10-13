@@ -1,0 +1,181 @@
+Configuring Routers : -
+
+R1 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.17 255.255.255.248
+no shut
+exit
+
+int s1/0
+ip address 10.1.1.1 255.255.255.252
+no shut
+exit
+
+int s1/1
+ip address 10.1.1.14 255.255.255.252
+no shut
+exit
+
+router ospf 6996
+network 10.1.1.0 0.0.0.3 area 0
+network 10.1.1.12 0.0.0.3 area 0
+exit
+
+router rip
+ver 2
+network 10.1.1.16
+exit
+
+
+R2 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.25 255.255.255.248
+no shut
+exit
+
+int s1/0
+ip address 10.1.1.2 255.255.255.252
+no shut
+exit
+
+int s1/1
+ip address 10.1.1.5 255.255.255.252
+no shut
+exit
+
+router ospf 6996
+network 10.1.1.0 0.0.0.3 area 0
+network 10.1.1.4 0.0.0.3 area 0
+exit
+
+router rip
+ver 2
+network 10.1.1.24
+exit
+
+
+R3 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.41 255.255.255.248
+no shut
+exit
+
+int s1/0
+ip address 10.1.1.13 255.255.255.252
+no shut
+exit
+
+int s1/1
+ip address 10.1.1.10 255.255.255.252
+no shut
+exit
+
+router ospf 6996
+network 10.1.1.8 0.0.0.3 area 0
+network 10.1.1.12 0.0.0.3 area 0
+exit
+
+router rip
+ver 2
+network 10.1.1.40
+exit
+
+
+R4 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.33 255.255.255.248
+no shut
+exit
+
+int s1/0
+ip address 10.1.1.6 255.255.255.252
+no shut
+exit
+
+int s1/1
+ip address 10.1.1.9 255.255.255.252
+no shut
+exit
+
+router ospf 6996
+network 10.1.1.4 0.0.0.3 area 0
+network 10.1.1.8 0.0.0.3 area 0
+exit
+
+router rip
+ver 2
+network 10.1.1.32
+exit
+
+
+R5 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.18 255.255.255.248
+no shut
+exit
+
+router rip
+ver 2
+network 10.1.1.16
+exit
+
+
+R6 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.26 255.255.255.248
+no shut
+exit
+
+router rip
+ver 2
+network 10.1.1.24
+exit
+
+
+R7 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.42 255.255.255.248
+no shut
+exit
+
+router rip
+ver 2
+network 10.1.1.40
+exit
+
+
+R8 : -
+
+conf t
+
+int f0/0
+ip address 10.1.1.34 255.255.255.248
+no shut
+exit
+
+router rip
+ver 2
+network 10.1.1.32
+exit
+
